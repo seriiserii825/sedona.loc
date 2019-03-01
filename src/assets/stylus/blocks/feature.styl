@@ -3,6 +3,10 @@
 	justify-content space-between
 	height: 256px
 
+	@media screen and (max-width: 500px) {
+		display block
+	}
+
 .feature__header
 	display flex
 	flex-direction column
@@ -13,12 +17,19 @@
 	padding 50px 0
 	color white
 	background accent-color
+	@media screen and (max-width: md) {
+		padding 50px
+	}
 
 .feature__title
 	max-width 172px
 	ptsansbold()
 	font-size 21px
 	text-transform uppercase
+	@media screen and (max-width: 500px) {
+		margin-bottom 18px
+		max-width none
+	}
 
 .feature__number
 	position relative
@@ -44,3 +55,23 @@
 .feature__description
 	width 290px
 	text-transform uppercase
+	@media screen and (max-width: md) {
+		width 174px
+	}
+	@media screen and (max-width: 500px) {
+		width 272px
+	}
+
+.feature__picture
+	overflow hidden
+	@media screen and (max-width: 500px) {
+		overflow visible
+	}
+
+.feature__image
+	max-width initial
+	height 100%
+	@media screen and (max-width: 500px) {
+		max-width: 100%
+		height auto
+	}

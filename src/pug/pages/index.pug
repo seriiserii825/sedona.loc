@@ -46,7 +46,9 @@ block content
 				.feature__number № 1
 				p.feature__description Седона не аттракцион для туристов, там течет своя жизнь
 			picture.feature__picture
-				img.feature__image(src="assets/i/feature-1.jpg", alt="feature-1")
+				source(media="(min-width: 768px)", srcset="assets/i/feature-1.jpg")
+				source(media="(min-width: 320px)", srcset="assets/i/feature-2.jpg")
+				img.feature__image(src="assets/i/feature-3.jpg", alt="feature-1")
 
 	//footer
 	|
