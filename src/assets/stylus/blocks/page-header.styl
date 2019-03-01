@@ -6,7 +6,44 @@
 	top 0
 	left 50%
 	transform translateX(-50%)
+	z-index 11
 	@media screen and (max-width: 670px) {
 		top initial
 		bottom -32px
 	}
+
+.page-header__content
+	position relative
+	display flex
+	justify-content center
+	align-items center
+	height 520px
+	background-image url("../i/header-bg.jpg")
+	background-repeat no-repeat
+	background-position center
+	z-index 10
+	@media screen and (max-width: md) {
+		background-image url("../i/header-bg-tablet.jpg")
+	}
+	@media screen and (max-width: xs) {
+		height 392px
+		background-image url("../i/header-bg-mobile.jpg")
+	}
+
+	&::after
+		content ''
+		position absolute
+		bottom 0
+		left 0
+		width 100%
+		height 60px
+		background-image url("../i/page-header-bottom.svg")
+		background-repeat no-repeat
+		background-position center
+		background-size cover
+
+	.page-header__img
+		@media screen and (max-width: 660px)
+			width 284px
+			height 216px
+

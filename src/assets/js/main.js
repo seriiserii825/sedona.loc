@@ -22,6 +22,9 @@ $(function () {
 	let showMenu = $('#js-show-menu');
 	let navList = $('#js-nav-list');
 
+
+	closeMenu.show();
+
 	showMenu.on('click', function(){
 		if(navList.hasClass('close')){
 			navList.slideDown();
