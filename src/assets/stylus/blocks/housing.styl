@@ -1,0 +1,49 @@
+.housing
+	display flex
+	justify-content space-between
+	align-items center
+	padding 68px 60px 86px
+	background white
+	@media screen and (max-width: 650px) {
+		display block
+	}
+
+.housing__item
+	text-align center
+	@media screen and (max-width: 650px) {
+		display flex
+		justify-content flex-start
+		text-align left
+	}
+
+.housing__description
+	width 260px
+	@media screen and (max-width: 980px) {
+		width 176px
+	}
+	@media screen and (max-width: 650px) {
+		max-width 240px
+		width auto
+	}
+
+.housing__icon
+	display table
+	margin: 0 auto
+	margin-bottom 30px
+	width 86px
+	// height 76px
+	@media screen and (max-width: 650px) {
+		margin 0
+		margin-right 10px
+		width 48px
+		font-size 6px
+	}
+
+.housing__title
+	ptsansbold()
+	font-size 21px
+	text-transform uppercase
+
+.housing__description
+	text-transform uppercase
+	color gray-brown
