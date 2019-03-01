@@ -23,8 +23,6 @@ let gulp = require('gulp'),
   //images
   webp = require('gulp-webp'),
   imagemin = require('gulp-imagemin'),
-	//fonts
-	ttf2woff2 = require('gulp-ttf2woff2'),
   //settings
   newer = require("gulp-newer"),
   debug = require("gulp-debug"),
@@ -184,12 +182,6 @@ gulp.task("image", function () {
     .pipe(browserSync.reload({
       stream: true
     }))
-});
-
-gulp.task('woff2', function(){
-  return gulp.src(['src/assets/ttf-font/*.ttf'])
-    .pipe(gp.ttf2woff2())
-    .pipe(gulp.dest('src/assets/fonts/'));
 });
 
 gulp.task("clean", function (cb) {
