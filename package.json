@@ -1,5 +1,5 @@
 {
-  "name": "start-template.loc",
+  "name": "sedona.loc",
   "version": "1.0.0",
   "main": "original_gulpfile.js",
   "dependencies": {
@@ -28,7 +28,6 @@
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0",
     "gulp-rigger": "^0.5.8",
-    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-stylint": "^4.0.2",
     "gulp-stylus": "^2.7.0",
@@ -50,14 +49,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seriiserii825/start-template.loc.git"
+    "url": "git+https://github.com/seriiserii825/sedona.loc.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/seriiserii825/start-template.loc/issues"
+    "url": "https://github.com/seriiserii825/sedona.loc/issues"
   },
-  "homepage": "https://github.com/seriiserii825/start-template.loc#readme",
+  "homepage": "https://github.com/seriiserii825/sedona.loc#readme",
   "description": "I don't have a nastavnik"
 }
