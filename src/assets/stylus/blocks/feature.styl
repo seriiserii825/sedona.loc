@@ -8,6 +8,19 @@
 		height auto
 	}
 
+	&.feature__reverse
+		.feature__header
+			order 3
+			@media screen and (max-width: 500px) {
+				order 2
+			}
+
+		.feature__picture
+			order 2
+			@media screen and (max-width: 500px) {
+				order 3
+			}
+
 .feature__header
 	display flex
 	flex-direction column
@@ -22,8 +35,13 @@
 		padding 50px
 	}
 
+	&--gray
+		color text-color
+		background feature-color
+
+
 .feature__title
-	max-width 172px
+	max-width 160px
 	ptsansbold()
 	font-size 21px
 	text-transform uppercase
@@ -76,3 +94,31 @@
 		max-width: 100%
 		height auto
 	}
+
+.feature__collections
+	display flex
+	justify-content space-between
+	@media screen and (max-width: 500px) {
+		display block
+	}
+
+	.feature__header
+		padding-left 0
+		padding-right 0
+		@media screen and (max-width: 500px) {
+			padding-top 34px
+			padding-bottom 34px
+			border-bottom 1px solid bright-telegray
+		}
+
+	.feature__number::before,
+	.feature__number::after
+		background gray-brown
+
+	.feature__description
+		@media screen and (max-width: 980px) {
+			width 160px
+		}
+		@media screen and (max-width: 500px) {
+			width 262px
+		}
