@@ -1,0 +1,46 @@
+.feature
+	display flex
+	justify-content space-between
+	height: 256px
+
+.feature__header
+	display flex
+	flex-direction column
+	justify-content space-between
+	align-items center
+	flex-grow 1
+	text-align center
+	padding 50px 0
+	color white
+	background accent-color
+
+.feature__title
+	max-width 172px
+	ptsansbold()
+	font-size 21px
+	text-transform uppercase
+
+.feature__number
+	position relative
+	padding 0 15px
+	letter-spacing -2px
+
+	&::before,
+	&::after
+		content ''
+		position absolute
+		top 50%
+		transform translateY(-50%)
+		width 10px
+		height 2px
+		background white
+
+	&::before
+		left 0
+
+	&::after
+		right 0
+
+.feature__description
+	width 290px
+	text-transform uppercase
