@@ -1,0 +1,30 @@
+.nav-menu
+	position relative
+	padding 0 70px 0 90px
+	background white
+	@media screen and (max-width: 850px) {
+		padding 0 25px 0 50px
+	}
+	@media screen and (max-width: 670px) {
+		padding 0
+		padding-bottom 56px
+	}
+
+.nav-menu__show-button,
+.nav-menu__close-button
+	@media screen and (min-width: 670px) {
+		display none
+	}
+
+.nav-menu__show-button
+	position absolute
+	right 20px
+	bottom 30px
+
+.nav-menu__close-button
+	position absolute
+	top 16px
+	right 20px
+	@media screen and (max-width: md) {
+		display none
+	}

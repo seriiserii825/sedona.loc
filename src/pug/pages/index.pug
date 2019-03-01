@@ -7,8 +7,27 @@ block title
 
 block content
 	.container
-		p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, et consequuntur obcaecati, architecto temporibus perspiciatis amet provident debitis consectetur laudantium nihil assumenda optio, commodi ratione deleniti? Voluptatem doloremque aspernatur consectetur!
+		.page-header
+			nav.nav-menu
+				ul.nav-list#js-nav-list
+					li.nav-list__item
+						a() Главная
+					li.nav-list__item
+						a(href="#") Фото и видео
+					li.nav-list__item
+						a(href="#") Форма отзыва
+					li.nav-list__item
+						a(href="#") Html Academy
 
+				.logo.page-header__logo
+					picture
+						source(media="(min-width: 768px)", srcset="assets/i/logo-desktop.svg")
+						img(src="assets/i/logo-mobile.svg", alt="logo")
+
+				button.show-menu.nav-menu__show-button#js-show-menu
+				button.close-menu.nav-menu__close-button#js-close-menu
+					span
+					span
 	//footer
 	|
 	|

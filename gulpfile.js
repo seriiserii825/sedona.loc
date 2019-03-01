@@ -175,7 +175,7 @@ gulp.task("js", function () {
 /* image:dev
 ====================================================*/
 gulp.task("image", function () {
-  return gulp.src('src/assets/i/**/*.{jpg,png,webp,gif}', {since: gulp.lastRun('image')})
+  return gulp.src('src/assets/i/*.*', {since: gulp.lastRun('image')})
     .pipe(gp.newer('build/assets/i'))
     .pipe(gp.debug({title: "image"}))
     .pipe(gulp.dest('build/assets/i'))
@@ -192,7 +192,7 @@ gulp.task("watch", function () {
   gulp.watch('src/assets/stylus/**/*.styl', gulp.series('css'));
   gulp.watch('src/pug/**/*.pug', gulp.series('pug'));
   gulp.watch('src/assets/js/**/*.js', gulp.series('js'));
-  gulp.watch(['src/assets/i/**/*.*'], gulp.series("image"));
+  gulp.watch(['src/assets/i/*.*'], gulp.series("image"));
   gulp.watch(['src/assets/i/svg/inline/*.*'], gulp.series("svg"));
   gulp.watch(['src/assets/i/svg/bg/*.*'], gulp.series("svg-bg"));
   gulp.watch(['src/assets/fonts/**/*.*'], gulp.series("fonts"));

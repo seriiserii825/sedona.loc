@@ -1,0 +1,47 @@
+.nav-list
+	display flex
+	justify-content space-between
+	&.close
+		display none
+	@media screen and (max-width: 670px) {
+		display block
+	}
+
+	&__item
+		height 56px
+		line-height 56px
+		ptsansbold()
+		text-transform uppercase
+		text-decoration none
+		color menu-color
+
+		&:nth-child(2)
+			margin-right 90px
+			@media screen and (max-width: 1000px) {
+				margin-right 0
+			}
+		&:nth-child(3)
+			margin-left 150px
+			@media screen and (max-width: 1000px) {
+				margin-left 200px
+			}
+			@media screen and (max-width: 670px) {
+				margin 0
+			}
+
+		@media screen and (max-width: 670px) {
+			margin 0
+			background menu-bg
+			border-top 1px solid menu-bg-light
+			border-bottom 1px solid menu-bg-dark
+		}
+
+		a
+			text-decoration inherit
+			color inherit
+			@media screen and (max-width: 670px) {
+				display flex
+				justify-content center
+				align-items center
+				color: white
+			}

@@ -1,0 +1,12 @@
+@import '../partials/variables'
+@import '../partials/mixins'
+
+.page-header__logo
+	position absolute
+	top 0
+	left 50%
+	transform translateX(-50%)
+	@media screen and (max-width: 670px) {
+		top initial
+		bottom -32px
+	}

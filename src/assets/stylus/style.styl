@@ -7,7 +7,7 @@ body
 	margin 0
 	padding 0
 	ptsans()
-	font-size 18px
+	font-size 14px
 	color text-color
 	background bg-color
 
@@ -20,7 +20,19 @@ img
 
 .container
 	margin 0 auto
+	padding: 0 40px
 	max-width 1200px
+	outline: 1px solid red
+	@media screen and (max-width: md) {
+		padding 0
+		max-width 768px
+	}
 
 ul
 	reset-list()
+
+@import 'blocks/page-header.styl'
+@import 'blocks/nav-menu.styl'
+@import 'blocks/nav-list.styl'
+@import 'blocks/show-menu.styl'
+@import 'blocks/close-menu.styl'

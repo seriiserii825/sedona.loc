@@ -17,4 +17,23 @@ $(function () {
     fixedBackground: true
   });
 
+	//show menu
+	let closeMenu = $('#js-close-menu');
+	let showMenu = $('#js-show-menu');
+	let navList = $('#js-nav-list');
+
+	showMenu.on('click', function(){
+		if(navList.hasClass('close')){
+			navList.slideDown();
+			closeMenu.show();
+		}else{
+			navList.addClass('close').slideUp();
+			closeMenu.hide();
+		}
+	});
+
+	closeMenu.on('click', function(){
+		navList.slideUp();
+		closeMenu.hide();
+	});
 });
