@@ -172,6 +172,14 @@ gulp.task("js", function () {
   // .pipe(gp.notify("Change js"));
 });
 
+gulp.task("alljs", function(){
+	return gulp.src('src/assets/js/*.js')
+    .pipe(gulp.dest('build/assets/js'))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
+
 /* image:dev
 ====================================================*/
 gulp.task("image", function () {
@@ -191,7 +199,8 @@ gulp.task("clean", function (cb) {
 gulp.task("watch", function () {
   gulp.watch('src/assets/stylus/**/*.styl', gulp.series('css'));
   gulp.watch('src/pug/**/*.pug', gulp.series('pug'));
-  gulp.watch('src/assets/js/**/*.js', gulp.series('js'));
+  gulp.watch('src/assets/js/main.js', gulp.series('js'));
+  gulp.watch('src/assets/js/**/*.js', gulp.series('alljs'));
   gulp.watch(['src/assets/i/*.*'], gulp.series("image"));
   gulp.watch(['src/assets/i/svg/inline/*.*'], gulp.series("svg"));
   gulp.watch(['src/assets/i/svg/bg/*.*'], gulp.series("svg-bg"));
@@ -217,6 +226,7 @@ gulp.task('default', gulp.series(
     'pug',
     'css',
     'js',
+    'alljs',
     'webp',
     'svg',
     'svg-bg',

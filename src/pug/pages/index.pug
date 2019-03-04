@@ -2,6 +2,10 @@ extends template
 
 block css
 
+block yandex-api
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_ru&apikey=*7494e3e7-008f-4e03-bd72-31a4650591f7" type="text/javascript">
+	</script>
+
 block title
 	title Главная
 
@@ -49,6 +53,7 @@ block content
 				source(media="(min-width: 768px)", srcset="assets/i/feature-1.jpg")
 				source(media="(min-width: 320px)", srcset="assets/i/feature-2.jpg")
 				img.feature__image(src="assets/i/feature-3.jpg", alt="feature-1")
+		//feature
 
 		.housing
 			.housing__item
@@ -99,12 +104,24 @@ block content
 
 				.feature__number № 6
 				p.feature__description Большинство едет в гранд каньон и толпится там
+		//feature__collections
+
+		section.interested
+			h2.interested__title Заинтересовалсиь?
+			p.interested__text Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне
+			button.button.interested__button Найти гостиницу
+		//interested
+
+		.map#js-map
+
 	//footer
 	|
 	|
 block comment-scripts
+
 block scripts
 	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
 	script(src="assets/libs/jquery-easy-scroll/jquery.easeScroll.js")
+	script(src="assets/js/yandex-map.js")
 	script(src="assets/js/main.min.js")
 
