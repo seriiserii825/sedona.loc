@@ -1,0 +1,38 @@
+extends template
+
+block title
+	title Photo
+
+block content
+	.hidden
+		include ../../../build/assets/i/svg/inline/sprite.svg
+
+	.container
+		.page-header
+			nav.nav-menu
+				ul.nav-list#js-nav-list
+					block main-nav
+						li.nav-list__item
+							a(href="index.html") Главная
+						li.nav-list__item.nav-list__item--active
+							a() Фото и видео
+						li.nav-list__item
+							a(href="form.html") Форма отзыва
+						li.nav-list__item
+							a(href="#") Html Academy
+
+				.logo.page-header__logo
+					picture
+						source(media="(min-width: 768px)", srcset="assets/i/logo-desktop.svg")
+						img(src="assets/i/logo-mobile.svg", alt="logo")
+
+				button.show-menu.nav-menu__show-button#js-show-menu
+				button.close-menu.nav-menu__close-button#js-close-menu
+				span
+				span
+		//nav-menu
+
+		.page-header__content
+			picture.page-header__img
+				img(src="assets/i/intro.svg", alt="intro" width="460" height="352")
+	//page-header

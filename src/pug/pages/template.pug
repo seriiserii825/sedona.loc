@@ -6,27 +6,50 @@ html(lang="ru_RU")
 
 		meta(charset="utf-8")
 
-		block append css
+		block css
 			link(rel="stylesheet" type="text/css" href="assets/css/style.min.css")
 			link(rel="stylesheet" type="text/css" href="assets/i/svg/bg/css/sprite.css")
 
 		block yandex-api
 
-		title
-			block title
+		block title
 
 	body
 		block content
 
 			block main-nav
 
+	block footer
+		.container
+			footer.page-footer
+				.page-footer__item.page-footer__item--visitsedona
+					a(href="#") #visitsedona
+				.page-footer__item.socials
+					.socials__item.tweeter
+						svg(width="20" height="20")
+							use(xlink:href="#tweeter")
+					.socials__item.facebook
+						svg(width="20" height="20")
+							use(xlink:href="#facebook")
+					.socials__item.youtube
+						svg(width="20" height="20")
+							use(xlink:href="#youtube")
+				.page-footer__item.page-footer__item--author
+						span.page-footer__title Разработано
+						svg.author(width="20" height="20")
+							use(xlink:href="#htmlacadevy")
+
+
 		block comment-scripts
 
-		<!--[if lt IE 9]>
-		<script src="assets/libs/html5shiv/es5-shim.min.js"></script>
-		<script src="assets/libs/html5shiv/html5shiv.min.js"></script>
-		<script src="assets/libs/html5shiv/html5shiv-printshiv.min.js"></script>
-		<script src="assets/libs/html5shiv/respond.min.js"></script>
-		<!--<![endif]-->
+			<!--[if lt IE 9]>
+			<script src="assets/libs/html5shiv/es5-shim.min.js"></script>
+			<script src="assets/libs/html5shiv/html5shiv.min.js"></script>
+			<script src="assets/libs/html5shiv/html5shiv-printshiv.min.js"></script>
+			<script src="assets/libs/html5shiv/respond.min.js"></script>
+			<!--<![endif]-->
 
 		block scripts
+			script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+			script(src="assets/libs/jquery-easy-scroll/jquery.easeScroll.js")
+			script(src="assets/js/main.min.js")

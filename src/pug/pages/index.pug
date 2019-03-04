@@ -1,29 +1,29 @@
 extends template
 
-block css
-
 block yandex-api
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_ru&apikey=*7494e3e7-008f-4e03-bd72-31a4650591f7" type="text/javascript">
-	</script>
+	script(src="https://api-maps.yandex.ru/2.1/?lang=ru_ru&apikey=*7494e3e7-008f-4e03-bd72-31a4650591f7" type="text/javascript")
 
 block title
 	title Главная
 
 block content
 
-	include ../../../build/assets/i/svg/inline/sprite.svg
+	.hidden
+		include ../../../build/assets/i/svg/inline/sprite.svg
+
 	.container
 		.page-header
 			nav.nav-menu
 				ul.nav-list#js-nav-list
-					li.nav-list__item
-						a() Главная
-					li.nav-list__item
-						a(href="#") Фото и видео
-					li.nav-list__item
-						a(href="#") Форма отзыва
-					li.nav-list__item
-						a(href="#") Html Academy
+					block main-nav
+						li.nav-list__item.nav-list__item--active
+							a() Главная
+						li.nav-list__item
+							a(href="photo.html") Фото и видео
+						li.nav-list__item
+							a(href="form.html") Форма отзыва
+						li.nav-list__item
+							a(href="#") Html Academy
 
 				.logo.page-header__logo
 					picture
@@ -32,13 +32,13 @@ block content
 
 				button.show-menu.nav-menu__show-button#js-show-menu
 				button.close-menu.nav-menu__close-button#js-close-menu
-					span
-					span
-			//nav-menu
+				span
+				span
+		//nav-menu
 
-			.page-header__content
-				picture.page-header__img
-					img(src="assets/i/intro.svg", alt="intro" width="460" height="352")
+		.page-header__content
+			picture.page-header__img
+				img(src="assets/i/intro.svg", alt="intro" width="460" height="352")
 		//page-header
 
 		section.section-header
@@ -116,31 +116,8 @@ block content
 
 		.map#js-map
 
-		footer.page-footer
-			.page-footer__item.page-footer__item--visitsedona
-				a(href="#") #visitsedona
-			.page-footer__item.socials
-				.socials__item.tweeter
-					svg(width="20" height="20")
-						use(xlink:href="#tweeter")
-				.socials__item.facebook
-					svg(width="20" height="20")
-						use(xlink:href="#facebook")
-				.socials__item.youtube
-					svg(width="20" height="20")
-						use(xlink:href="#youtube")
-			.page-footer__item.page-footer__item--author
-				span.page-footer__title Разработано
-				svg.author(width="20" height="20")
-					use(xlink:href="#htmlacadevy")
-		//footer
-		|
-		|
 block comment-scripts
 
-block scripts
-	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
-	script(src="assets/libs/jquery-easy-scroll/jquery.easeScroll.js")
+block append scripts
 	script(src="assets/js/yandex-map.js")
-	script(src="assets/js/main.min.js")
 
