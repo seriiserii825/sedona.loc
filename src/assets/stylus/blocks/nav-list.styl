@@ -15,8 +15,16 @@
 		text-decoration none
 		color menu-color
 
+		&:hover
+			color accent-color
+
+		&:active
+			color gray
+
 		&--active
 			border-bottom 1px solid black
+			&:hover
+				color menu-color
 
 		&:nth-child(2)
 			margin-right 90px
@@ -42,9 +50,11 @@
 		a
 			text-decoration inherit
 			color inherit
+			transition all .3s ease
 			@media screen and (max-width: 670px) {
 				display flex
 				justify-content center
 				align-items center
 				color: white
 			}
+

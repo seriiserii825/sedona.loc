@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "main": "original_gulpfile.js",
   "dependencies": {
+    "bower": "^1.8.8",
     "gulp-cheerio": "^0.6.3",
     "gulp-svgmin": "^2.1.0",
     "jquery": "^3.3.1",
     "postcss": "^7.0.6",
+    "slick": "^1.12.2",
+    "slick-carousel": "^1.8.1",
     "ttf2woff2": "^2.0.3"
   },
   "devDependencies": {
@@ -47,12 +50,9 @@
     "lint": "sass-lint -v",
     "lint:fix": "sass-lint-auto-fix"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/seriiserii825/sedona.loc.git"
-  },
+  "repository": "git+https://github.com/seriiserii825/sedona.loc.git",
   "keywords": [],
-  "author": "",
+  "author": "serii <seriiburduja@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/seriiserii825/sedona.loc/issues"

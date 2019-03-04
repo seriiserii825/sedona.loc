@@ -87,9 +87,8 @@ gulp.task('pug', function () {
     .pipe(gulp.dest('build/'))
     .pipe(browserSync.reload({
       stream: true
-    }));
-    // .on('end', browserSync.reload);
-  // .pipe(gp.notify("Change html"));
+    }))
+  .pipe(gp.notify("Change html"));
 });
 
 //=======================
@@ -102,7 +101,9 @@ gulp.task("css", function () {
     .pipe(stylint({config: '.stylintrc'}))
     .pipe(gp.debug({title: "stylus"}))
 		.pipe(stylint.reporter())
-    .pipe(stylus())
+    .pipe(stylus({
+			'include css': true
+		}))
     .pipe(gp.autoprefixer({
       cascade: false
     }))
@@ -113,8 +114,8 @@ gulp.task("css", function () {
     .pipe(gulp.dest('build/assets/css/'))
     .pipe(browserSync.reload({
       stream: true
-    }));
-  // .pipe(gp.notify("Change css"));
+    }))
+  .pipe(gp.notify("Change css"));
 });
 
 //============================
@@ -168,8 +169,8 @@ gulp.task("js", function () {
     .pipe(gulp.dest('build/assets/js'))
     .pipe(browserSync.reload({
       stream: true
-    }));
-  // .pipe(gp.notify("Change js"));
+    }))
+  .pipe(gp.notify("Change js"));
 });
 
 gulp.task("alljs", function(){

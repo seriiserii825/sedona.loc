@@ -35,4 +35,28 @@ block content
 		.page-header__content
 			picture.page-header__img
 				img(src="assets/i/intro.svg", alt="intro" width="460" height="352")
-	//page-header
+		//page-header
+
+		section.section-header
+			.section-header__content
+				h2.section-header__title Фото и видео
+				p.section-header__description Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
+
+		.photo-slider#js-photo-slider
+			.photo-slider__item
+				img(src="assets/i/slider-big-1.jpg", alt="photo")
+			.photo-slider__item
+				img(src="assets/i/slider-big-2.jpg", alt="photo")
+			.photo-slider__item
+				img(src="assets/i/slider-big-3.jpg", alt="photo")
+			.photo-slider__item
+				img(src="assets/i/slider-big-4.jpg", alt="photo")
+			.photo-slider__item
+				img(src="assets/i/slider-big-5.jpg", alt="photo")
+
+		include ../includes/footer
+		include ../includes/ie-scripts
+		include ../includes/scripts
+		script(src="assets/libs/slick/slick/slick.min.js ")
+		script(src="assets/js/main.min.js")
+

@@ -16,7 +16,7 @@ block content
 			nav.nav-menu
 				ul.nav-list#js-nav-list
 					block main-nav
-						li.nav-list__item.nav-list__item--active
+						li.nav-list__item
 							a() Главная
 						li.nav-list__item
 							a(href="photo.html") Фото и видео
@@ -116,8 +116,8 @@ block content
 
 		.map#js-map
 
-block comment-scripts
-
-block append scripts
+	include ../includes/scripts.pug
+	script(src="assets/libs/slick/slick.min.js ")
+	script(src="assets/js/main.min.js")
 	script(src="assets/js/yandex-map.js")
 

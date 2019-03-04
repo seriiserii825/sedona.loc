@@ -39,5 +39,11 @@ $(function () {
 		navList.slideUp();
 		closeMenu.hide();
 	});
+
+	//photo-slider
+	$('#js-photo-slider').slick({
+		arrows: false
+	});
+
 });
 
