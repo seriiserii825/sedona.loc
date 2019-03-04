@@ -1,0 +1,38 @@
+.page-footer
+	display flex
+	justify-content space-around
+	align-items center
+	padding 36px 0
+	background white
+	@media screen and (max-width: 530px) {
+		flex-direction column
+		height 190px
+	}
+
+.page-footer__item
+	@media screen and (max-width: 530px) {
+		text-align center
+	}
+	svg
+		fill white
+
+.page-footer__item--visitsedona
+	a
+		ptsansbold()
+		font-size 21px
+		text-decoration none
+		text-transform uppercase
+		color inherit
+
+.page-footer__item--author
+	display flex
+	justify-content space-between
+	align-items center
+	svg
+		width 28px
+		height 36px
+		fill black
+
+.page-footer__title
+	margin-right 10px
+	text-transform uppercase

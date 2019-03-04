@@ -10,6 +10,8 @@ block title
 	title Главная
 
 block content
+
+	include ../../../build/assets/i/svg/inline/sprite.svg
 	.container
 		.page-header
 			nav.nav-menu
@@ -114,9 +116,26 @@ block content
 
 		.map#js-map
 
-	//footer
-	|
-	|
+		footer.page-footer
+			.page-footer__item.page-footer__item--visitsedona
+				a(href="#") #visitsedona
+			.page-footer__item.socials
+				.socials__item.tweeter
+					svg(width="20" height="20")
+						use(xlink:href="#tweeter")
+				.socials__item.facebook
+					svg(width="20" height="20")
+						use(xlink:href="#facebook")
+				.socials__item.youtube
+					svg(width="20" height="20")
+						use(xlink:href="#youtube")
+			.page-footer__item.page-footer__item--author
+				span.page-footer__title Разработано
+				svg.author(width="20" height="20")
+					use(xlink:href="#htmlacadevy")
+		//footer
+		|
+		|
 block comment-scripts
 
 block scripts

@@ -223,7 +223,6 @@ gulp.task('browser-sync', function () {
 gulp.task('default', gulp.series(
   'clean',
   gulp.parallel(
-    'pug',
     'css',
     'js',
     'alljs',
@@ -235,5 +234,5 @@ gulp.task('default', gulp.series(
     'libs',
     'favicon'
   ),
-  gulp.parallel('watch', 'browser-sync')
+  gulp.parallel('pug', 'watch', 'browser-sync')
 ));
