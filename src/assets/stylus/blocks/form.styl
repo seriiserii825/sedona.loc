@@ -1,7 +1,7 @@
 .form
 	display grid
 	grid-template-columns repeat(2, 1fr)
-	grid-template-rows repeat(5, auto)
+	grid-template-rows repeat(6, auto)
 	grid-template-areas "impressions introduce"\
 											"contacts contacts"\
 											"sights sights"\
@@ -9,6 +9,22 @@
 											"submit submit"
 	padding 6px 120px 66px
 	background white
+	@media screen and (max-width: xl) {
+		padding 6px 60px 66px
+	}
+	@media screen and (max-width: 730px) {
+		grid-template-columns 1fr
+		grid-template-areas "introduce"\
+												"contacts"\
+												"impressions"\
+												"sights"\
+												"emotions"\
+												"submit"
+	}
+
+	@media screen and (max-width: 560px) {
+		padding 24px
+	}
 
 	.form__header
 		position relative
@@ -21,6 +37,9 @@
 			height 1px
 			background border-color
 			z-index 2
+			@media screen and (max-width: 560px) {
+				display none
+			}
 
 .form__title
 	ptsansbold()
@@ -34,6 +53,9 @@
 	padding 0 60px
 	background white
 	z-index 4
+	@media screen and (max-width: 560px) {
+		padding 0
+	}
 
 
 .form__title--contacts
@@ -42,6 +64,9 @@
 .form__group--impressions
 	grid-area impressions
 	border-right 1px solid border-color
+	@media screen and (max-width: 730px) {
+		border none
+	}
 
 .form__group--introduce
 	grid-area introduce
@@ -62,13 +87,22 @@
 	display flex
 	justify-content space-between
 	align-items center
+	@media screen and (max-width: 730px) {
+		display block
+	}
 
 .submit__button
 	display block
 	margin 0
+	@media screen and (max-width: 840px) {
+		width 100%
+	}
 
 .submit__text
 	text-transform uppercase
+	@media screen and (max-width: 840px) {
+		display none
+	}
 
 .form__group--impressions,
 .form__group--introduce
@@ -78,9 +112,15 @@
 .form__title--introduce
 	margin-bottom 67px
 	padding-left 71px
+	@media screen and (max-width: xl) {
+		padding-left 0
+	}
 
 .form__title--introduce
 	padding-left 79px
+	@media screen and (max-width: xl) {
+		padding-left 58px
+	}
 
 .form__content--impressions
 	display flex
@@ -113,6 +153,31 @@
 	display flex
 	flex-direction column
 	padding-left 71px
+	@media screen and (max-width: xl) {
+		padding-left 58px
+	}
+	@media screen and (max-width: 560px) {
+		padding-left 0
+	}
+
+.form__box--name
+	input
+		@media screen and (max-width: xl) {
+			width 216px
+		}
+		@media screen and (max-width: 560px) {
+			width 100%
+		}
+
+.form__box--surname,
+.form__box--patrymonic
+	input
+		@media screen and (max-width: xl) {
+			width 178px
+		}
+		@media screen and (max-width: 560px) {
+			width 100%
+		}
 
 input[type="radio"]
 	display none
@@ -147,12 +212,22 @@ input[type="phone"]
 	display flex
 	justify-content space-between
 	padding-right 58px
+	@media screen and (max-width: 1105px) {
+		display block
+	}
 	label
 		margin-right 14px
 		font-size 14px
 		text-transform uppercase
+		@media screen and (max-width: 1105px) {
+			display block
+			margin-bottom 14px
+		}
 	input
 		width 257px
+		@media screen and (max-width: 1105px) {
+			width 100%
+		}
 
 	.icon-phone,
 	.icon-mail
@@ -160,6 +235,11 @@ input[type="phone"]
 
 .form__small-group
 	position relative
+
+.form__small-group--contacts
+	@media screen and (max-width: xl) {
+		margin-bottom 30px
+	}
 
 .form__svg
 	position absolute
@@ -171,6 +251,9 @@ input[type="phone"]
 	width 58px
 	height 58px
 	background svg-form-bg
+	@media screen and (max-width: 1105px) {
+		top 32px
+	}
 
 .form__title--sights
 	margin-bottom 50px
@@ -180,6 +263,16 @@ input[type="phone"]
 .form__content--sights
 	display flex
 	justify-content space-between
+	@media screen and (max-width: 979px) {
+		display grid
+		grid-template-columns repeat(2, 210px)
+		grid-template-rows repeat(2, 1fr)
+		grid-gap 40px
+		justify-content center
+	}
+	@media screen and (max-width: 560px) {
+		display block
+	}
 	input[type="checkbox"]
 		display none
 	label
@@ -223,3 +316,7 @@ textarea
 	background smoky-white
 	border none
 
+.form__small-group--sights
+	@media screen and (max-width: 560px) {
+		margin-bottom 34px
+	}

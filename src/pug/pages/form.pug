@@ -59,13 +59,13 @@ block content
 				h2.form__title.form__title--introduce Представьтесь:
 
 				.form__content.form__content--introduce
-					.form__box
+					.form__box.form__box--name
 						label(for="name") Имя:
 						input(type="text" name="name" id="name" placeholder="Петр")
-					.form__box
+					.form__box.form__box--surname
 						label(for="surname") Фамилия:
 						input(type="text" name="surname" id="surname" placeholder="Иванов")
-					.form__box
+					.form__box.form__box--patrymonic
 						label(for="patrymonic") Отчество:
 						input(type="text" name="patrymonic" id="patrymonic" placeholder="Александрович")
 
@@ -74,14 +74,14 @@ block content
 					h2.form__title.form__title--contacts.form__title--center Контактная информация:
 
 				.form__content.form__content--contacts
-					.form__small-group
+					.form__small-group.form__small-group--contacts
 						label(for="phone") Телефон*:
 						input(type="phone" name="phone" id="phone" placeholder="Введите телефон")
 						.form__svg
 							svg.icon-phone(width="18" height="18")
 								use(xlink:href="#phone")
 
-					.form__small-group
+					.form__small-group.form__small-group--contacts
 						label(for="mail") Электронная почта*:
 						input(type="email" name="mail" id="mail" placeholder="Введите e-mail")
 						.form__svg
