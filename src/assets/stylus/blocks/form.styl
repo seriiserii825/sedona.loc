@@ -1,7 +1,7 @@
 .form
 	display grid
 	grid-template-columns repeat(2, 1fr)
-	grid-template-rows repeat(5, 1fr)
+	grid-template-rows repeat(5, auto)
 	grid-template-areas "impressions introduce"\
 											"contacts contacts"\
 											"sights sights"\
@@ -10,10 +10,34 @@
 	padding 6px 120px 66px
 	background white
 
+	.form__header
+		position relative
+		&::after
+			content ''
+			position absolute
+			top 50%
+			left 0
+			width 100%
+			height 1px
+			background border-color
+			z-index 2
+
 .form__title
 	ptsansbold()
 	font-size 21px
 	text-transform uppercase
+
+.form__title--center
+	position relative
+	display table
+	margin 0 auto
+	padding 0 60px
+	background white
+	z-index 4
+
+
+.form__title--contacts
+	margin-bottom 77px
 
 .form__group--impressions
 	grid-area impressions
@@ -24,15 +48,27 @@
 
 .form__group--contacts
 	grid-area contacts
+	margin-bottom 58px
 
 .form__group--sights
 	grid-area sights
+	margin-bottom 76px
 
 .form__group--emotions
 	grid-area emotions
 
 .form__group--submit
 	grid-area submit
+	display flex
+	justify-content space-between
+	align-items center
+
+.submit__button
+	display block
+	margin 0
+
+.submit__text
+	text-transform uppercase
 
 .form__group--impressions,
 .form__group--introduce
@@ -85,6 +121,8 @@ input[type="text"],
 input[type="email"],
 input[type="phone"]
 	height 58px
+	font-size 18px
+	font-weight bold
 	line-height 58px
 	text-indent 22px
 	background smoky-white
@@ -104,3 +142,84 @@ input[type="phone"]
 
 	input
 		flex-grow 1
+
+.form__content--contacts
+	display flex
+	justify-content space-between
+	padding-right 58px
+	label
+		margin-right 14px
+		font-size 14px
+		text-transform uppercase
+	input
+		width 257px
+
+	.icon-phone,
+	.icon-mail
+		fill black
+
+.form__small-group
+	position relative
+
+.form__svg
+	position absolute
+	top 0
+	right -58px
+	display flex
+	justify-content center
+	align-items center
+	width 58px
+	height 58px
+	background svg-form-bg
+
+.form__title--sights
+	margin-bottom 50px
+	width 280px
+	text-align center
+
+.form__content--sights
+	display flex
+	justify-content space-between
+	input[type="checkbox"]
+		display none
+	label
+		display block
+		position relative
+		padding-left 76px
+		height 46px
+		line-height 46px
+		font-size 18px
+		font-weight bold
+		cursor pointer
+		&::before
+			content ''
+			position absolute
+			top 0
+			left 0
+			width 46px
+			height 46px
+			background smoky-white
+	input[type="checkbox"]:checked + label::after
+		content ''
+		position absolute
+		top 10px
+		left 10px
+		width 26px
+		height 26px
+		background-image url("../i/tick.svg")
+		background-repeat no-repeat
+		background-position center
+
+.form__title--emotions
+	margin-bottom 60px
+
+textarea
+	margin-bottom 60px
+	padding 22px
+	width 100%
+	height 160px
+	font-size 18px
+	font-weight bold
+	background smoky-white
+	border none
+

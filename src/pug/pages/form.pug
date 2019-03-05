@@ -43,7 +43,7 @@ block content
 				h2.section-header__title Оставьте свой отзыв
 				p.section-header__description  Помогите нашим отелям стать лучше! оставьте отзыв о них,<br> а также о посещенных вами достопримечательностях
 
-		.form
+		form.form
 			.form__group--impressions
 				h2.form__title.form__title--impressions ваше общее впечатление:
 
@@ -71,39 +71,49 @@ block content
 
 			.form__group--contacts
 				header.form__header
-					h2.form__title.form__title--center Контактная информация:
+					h2.form__title.form__title--contacts.form__title--center Контактная информация:
 
-				.form__content
+				.form__content.form__content--contacts
 					.form__small-group
 						label(for="phone") Телефон*:
-						input(type="phone" name="phone" id="phone")
+						input(type="phone" name="phone" id="phone" placeholder="Введите телефон")
+						.form__svg
+							svg.icon-phone(width="18" height="18")
+								use(xlink:href="#phone")
 
 					.form__small-group
 						label(for="mail") Электронная почта*:
-						input(type="email" name="mail" id="mail")
+						input(type="email" name="mail" id="mail" placeholder="Введите e-mail")
+						.form__svg
+							svg.icon-mail(width="18" height="18")
+								use(xlink:href="#mail")
 
 			.form__group--sights
 				header.form__header
-					h2.form__title.form__title--center Посещенные достопримечательности:
+					h2.form__title.form__title--sights.form__title--center Посещенные достопримечательности:
 
-				.form__content
-					input(type="checkbox" name="sights" id="bridge")
-					label(for="bridge") Мост Дьявола
-					input(type="checkbox" name="sights" id="mount")
-					label(for="mount") Гора-Колокол
-					input(type="checkbox" name="sights" id="park")
-					label(for="park") Слайд-Парк
-					input(type="checkbox" name="sights" id="rock")
-					label(for="rock") Красные скалы
+				.form__content.form__content--sights
+					.form__small-group.form__small-group--sights
+						input(type="checkbox" name="sights" id="bridge" checked)
+						label(for="bridge") Мост Дьявола
+					.form__small-group.form__small-group--sights
+						input(type="checkbox" name="sights" id="mount" checked)
+						label(for="mount") Гора-Колокол
+					.form__small-group.form__small-group--sights
+						input(type="checkbox" name="sights" id="park" checked)
+						label(for="park") Слайд-Парк
+					.form__small-group.form__small-group--sights
+						input(type="checkbox" name="sights" id="rock")
+						label(for="rock") Красные скалы
 
 			.form__group--emotions
 				header.form__header
-					h2.form__title.form__title--center Опишите свои эмоции:
+					h2.form__title.form__title--emotions.form__title--center Опишите свои эмоции:
 
 				.form__content
-					textarea(name="emotions") Опишите подробно все свои восторги
+					textarea(name="emotions" placeholder="Опишите подробно все свои восторги")
 
-			.form__group--submit
+			.form__group--submit.submit
 				button.submit__button.button Отправить отзыв
 				span.submit__text * &mdash; Обязательные поля
 
