@@ -79,7 +79,7 @@ gulp.task('svg-bg', function () {
 });
 
 gulp.task('pug', function () {
-  return gulp.src('src/pug/pages/*.pug', {since: gulp.lastRun('pug')})
+  return gulp.src('src/pug/pages/*.pug')
     .pipe(gp.debug({title: "pug"}))
     .pipe(gp.pug({
       pretty: true
@@ -227,7 +227,7 @@ gulp.task('default', gulp.series(
     'css',
     'js',
     'alljs',
-    'webp',
+    // 'webp',
     'svg',
     'svg-bg',
     'fonts',

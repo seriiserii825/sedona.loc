@@ -28,8 +28,8 @@ block content
 
 				button.show-menu.nav-menu__show-button#js-show-menu
 				button.close-menu.nav-menu__close-button#js-close-menu
-				span
-				span
+					span
+					span
 		//nav-menu
 
 		.page-header__content
@@ -42,72 +42,12 @@ block content
 				h2.section-header__title Фото и видео
 				p.section-header__description Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
 
-		.photo-slider#js-photo-slider
-			.photo-slider__item
-				picture
-					source(media="(min-width: 648px)", srcset="assets/i/slider-big-1.jpg")
-					source(media="(min-width: 320px)", srcset="assets/i/slider-big-648-1.jpg")
-					img(src="assets/i/slider-big-280-1.jpg", alt="photo")
-				.photo-slider__content
-					.photo-slider__text
-						h3.photo-slider__title Неродные просторы
-						p.photo-slider__author автор фото: Борис
-					.photo-slider__likes
-						svg.icon-like
-							use(xlink:href="#like")
-						span.like-number 1350
-			.photo-slider__item
-				picture
-					source(media="(min-width: 648px)", srcset="assets/i/slider-big-2.jpg")
-					source(media="(min-width: 320px)", srcset="assets/i/slider-big-648-2.jpg")
-					img(src="assets/i/slider-big-280-2.jpg", alt="photo")
-				.photo-slider__content
-					.photo-slider__text
-						h3.photo-slider__title Неродные просторы
-						p.photo-slider__author автор фото: Борис
-					.photo-slider__likes
-						svg.icon-like
-							use(xlink:href="#like")
-						span.like-number 350
-			.photo-slider__item
-				picture
-					source(media="(min-width: 648px)", srcset="assets/i/slider-big-3.jpg")
-					source(media="(min-width: 320px)", srcset="assets/i/slider-big-648-3.jpg")
-					img(src="assets/i/slider-big-280-3.jpg", alt="photo")
-				.photo-slider__content
-					.photo-slider__text
-						h3.photo-slider__title Неродные просторы
-						p.photo-slider__author автор фото: Борис
-					.photo-slider__likes
-						svg.icon-like
-							use(xlink:href="#like")
-						span.like-number 1350
-			.photo-slider__item
-				picture
-					source(media="(min-width: 648px)", srcset="assets/i/slider-big-4.jpg")
-					source(media="(min-width: 320px)", srcset="assets/i/slider-big-648-4.jpg")
-					img(src="assets/i/slider-big-280-4.jpg", alt="photo")
-				.photo-slider__content
-					.photo-slider__text
-						h3.photo-slider__title Неродные просторы
-						p.photo-slider__author автор фото: Борис
-					.photo-slider__likes
-						svg.icon-like
-							use(xlink:href="#like")
-						span.like-number 850
-			.photo-slider__item
-				picture
-					source(media="(min-width: 648px)", srcset="assets/i/slider-big-5.jpg")
-					source(media="(min-width: 320px)", srcset="assets/i/slider-big-648-5.jpg")
-					img(src="assets/i/slider-big-280-5.jpg", alt="photo")
-				.photo-slider__content
-					.photo-slider__text
-						h3.photo-slider__title Неродные просторы
-						p.photo-slider__author автор фото: Борис
-					.photo-slider__likes
-						svg.icon-like
-							use(xlink:href="#like")
-						span.like-number 550
+		include ../includes/photo-slider
+		//photo-slider
+
+
+		include ../includes/photo-slider-small
+		//photo-slider-small
 
 		include ../includes/footer
 		include ../includes/ie-scripts

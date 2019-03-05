@@ -2,6 +2,10 @@
 	@media screen and (max-width: 320px) {
 		padding 0 20px
 	}
+	&--big
+		@media screen and (max-width: 448px) {
+			display none
+		}
 
 .photo-slider__item
 	position relative
@@ -24,11 +28,24 @@
 		color text-color
 		background smoky-white
 	}
+	@media screen and (max-width: 448px) {
+		position static
+		display block
+		margin 0 auto
+		padding 20px 0 50px
+		width 324px
+		height auto
+	}
 
 .photo-slider__title
 	margin-bottom 6px
 	ptsansbold()
 	text-transform uppercase
+
+.photo-slider__text
+	@media screen and (max-width: 448px) {
+		margin-bottom 10px
+	}
 
 .photo-slider__likes
 	display flex
@@ -43,3 +60,15 @@
 	@media screen and (max-width: md) {
 		fill #a9a9a9
 	}
+
+.photo-slider-small
+	@media screen and (max-width: 448px) {
+		margin 0 auto
+		max-width 448px
+	}
+	.photo-slider__item
+		img
+			@media screen and (max-width: 448px) {
+				display table
+				margin 0 auto
+			}

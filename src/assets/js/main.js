@@ -23,7 +23,7 @@ $(function () {
 	let navList = $('#js-nav-list');
 
 
-	closeMenu.show();
+	// closeMenu.show();
 
 	showMenu.on('click', function(){
 		if(navList.hasClass('close')){
@@ -40,10 +40,37 @@ $(function () {
 		closeMenu.hide();
 	});
 
-	//photo-slider
-	$('#js-photo-slider').slick({
-		arrows: false
-	});
+	if($('#js-photo-slider').length > 0){
+		//photo-slider
+		$('#js-photo-slider').slick({
+			arrows: false,
+			asNavFor: '#js-photo-slider-small'
+		});
+	}
+
+	if($('#js-photo-slider-small').length > 0){
+		//photo-slider-small
+		$('#js-photo-slider-small').slick({
+			arrows: false,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			asNavFor: '#js-photo-slider',
+			focusOnSelect: true,
+			responsive: [
+					{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 2
+						}
+					},
+					{
+						breakpoint: 448,
+						settings: "unslick"
+					}
+				]
+		});
+	}
+
 
 });
 
