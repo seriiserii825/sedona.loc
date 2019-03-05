@@ -1,0 +1,106 @@
+.form
+	display grid
+	grid-template-columns repeat(2, 1fr)
+	grid-template-rows repeat(5, 1fr)
+	grid-template-areas "impressions introduce"\
+											"contacts contacts"\
+											"sights sights"\
+											"emotions emotions"\
+											"submit submit"
+	padding 6px 120px 66px
+	background white
+
+.form__title
+	ptsansbold()
+	font-size 21px
+	text-transform uppercase
+
+.form__group--impressions
+	grid-area impressions
+	border-right 1px solid border-color
+
+.form__group--introduce
+	grid-area introduce
+
+.form__group--contacts
+	grid-area contacts
+
+.form__group--sights
+	grid-area sights
+
+.form__group--emotions
+	grid-area emotions
+
+.form__group--submit
+	grid-area submit
+
+.form__group--impressions,
+.form__group--introduce
+	margin-bottom 78px
+
+.form__title--impressions,
+.form__title--introduce
+	margin-bottom 67px
+	padding-left 71px
+
+.form__title--introduce
+	padding-left 79px
+
+.form__content--impressions
+	display flex
+	flex-direction column
+	padding-left 71px
+
+	label
+		position relative
+		margin-bottom 32px
+		ptsansbold()
+		font-size 18px
+		height 46px
+		cursor pointer
+
+		&::before
+			content ''
+			position absolute
+			top -9px
+			left -71px
+			width 16px
+			height 16px
+			background border-color
+			border 15px solid border-color
+			border-radius 50%
+
+	input[type="radio"]:checked + label::before
+			background signal-black
+
+.form__content--introduce
+	display flex
+	flex-direction column
+	padding-left 71px
+
+input[type="radio"]
+	display none
+
+input[type="text"],
+input[type="email"],
+input[type="phone"]
+	height 58px
+	line-height 58px
+	text-indent 22px
+	background smoky-white
+	border none
+
+.form__box
+	display flex
+	justify-content flex-start
+	align-items center
+	margin-bottom 20px
+
+	label
+		ptsans()
+		font-size 14px
+		margin-right 14px
+		text-transform uppercase
+
+	input
+		flex-grow 1

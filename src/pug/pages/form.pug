@@ -1,0 +1,116 @@
+extends template
+
+block title
+	title Форма отзыва
+
+block content
+
+	.hidden
+		include ../../../build/assets/i/svg/inline/sprite.svg
+
+	.container
+		.page-header
+			nav.nav-menu
+				ul.nav-list#js-nav-list
+					block main-nav
+						li.nav-list__item
+							a(href="index.html") Главная
+						li.nav-list__item
+							a(href="photo.html") Фото и видео
+						li.nav-list__item
+							a() Форма отзыва
+						li.nav-list__item
+							a(href="#") Html Academy
+
+				.logo.page-header__logo
+					picture
+						source(media="(min-width: 768px)", srcset="assets/i/logo-desktop.svg")
+						img(src="assets/i/logo-mobile.svg", alt="logo")
+
+				button.show-menu.nav-menu__show-button#js-show-menu
+				button.close-menu.nav-menu__close-button#js-close-menu
+					span
+					span
+		//nav-menu
+
+		.page-header__content
+			picture.page-header__img
+				img(src="assets/i/intro.svg", alt="intro" width="460" height="352")
+		//page-header
+
+		section.section-header
+			.section-header__content
+				h2.section-header__title Оставьте свой отзыв
+				p.section-header__description  Помогите нашим отелям стать лучше! оставьте отзыв о них,<br> а также о посещенных вами достопримечательностях
+
+		.form
+			.form__group--impressions
+				h2.form__title.form__title--impressions ваше общее впечатление:
+
+				.form__content.form__content--impressions
+					input(type="radio", name="impressions" id="impression1" checked="checked")
+					label(for="impression1") Скорее положительное
+					input(type="radio", name="impressions" id="impression2")
+					label(for="impression2") Скорее отрицательное
+					input(type="radio", name="impressions" id="impression3")
+					label(for="impression3") Затрудняюсь ответить
+
+			.form__group--introduce
+				h2.form__title.form__title--introduce Представьтесь:
+
+				.form__content.form__content--introduce
+					.form__box
+						label(for="name") Имя:
+						input(type="text" name="name" id="name" placeholder="Петр")
+					.form__box
+						label(for="surname") Фамилия:
+						input(type="text" name="surname" id="surname" placeholder="Иванов")
+					.form__box
+						label(for="patrymonic") Отчество:
+						input(type="text" name="patrymonic" id="patrymonic" placeholder="Александрович")
+
+			.form__group--contacts
+				header.form__header
+					h2.form__title.form__title--center Контактная информация:
+
+				.form__content
+					.form__small-group
+						label(for="phone") Телефон*:
+						input(type="phone" name="phone" id="phone")
+
+					.form__small-group
+						label(for="mail") Электронная почта*:
+						input(type="email" name="mail" id="mail")
+
+			.form__group--sights
+				header.form__header
+					h2.form__title.form__title--center Посещенные достопримечательности:
+
+				.form__content
+					input(type="checkbox" name="sights" id="bridge")
+					label(for="bridge") Мост Дьявола
+					input(type="checkbox" name="sights" id="mount")
+					label(for="mount") Гора-Колокол
+					input(type="checkbox" name="sights" id="park")
+					label(for="park") Слайд-Парк
+					input(type="checkbox" name="sights" id="rock")
+					label(for="rock") Красные скалы
+
+			.form__group--emotions
+				header.form__header
+					h2.form__title.form__title--center Опишите свои эмоции:
+
+				.form__content
+					textarea(name="emotions") Опишите подробно все свои восторги
+
+			.form__group--submit
+				button.submit__button.button Отправить отзыв
+				span.submit__text * &mdash; Обязательные поля
+
+
+		include ../includes/footer
+
+	include ../includes/ie-scripts
+	include ../includes/scripts.pug
+	script(src="assets/js/main.min.js")
+
